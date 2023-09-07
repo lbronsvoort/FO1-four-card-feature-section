@@ -1,0 +1,60 @@
+:root {
+    --primary-red: hsl(0, 78%, 62%);
+    --primary-cyan: hsl(180, 62%, 55%);
+    --primary-orange: hsl(34, 97%, 64%);
+    --primary-blue: hsl(212, 86%, 64%);
+
+    --neutral-dark-blue: hsl(234, 12%, 34%);
+    --neutral-grayish-blue: hsl(229, 6%, 66%);
+    --neutral-light-gray: hsl(0, 0%, 98%);
+
+    --font-size: 15px;
+    --font-family: 'Poppins', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+body {
+    background-color: var(--neutral-light-gray);
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Tekst */
+
+.main {
+    border: 1px solid red;
+    /* Media queries straks voor de padding op mobiel */
+}
+
+.main__heading {
+    text-align: center;
+    color: var(--neutral-dark-blue);
+    margin-bottom: 2em;
+}
+
+/* Op de een of andere manier werkt dit niet genest. */
+.main__heading--h1 {
+    font-weight: 200;
+    font-size: 1.8rem;
+    margin-bottom: .5em;
+}
+
+/* Geen probleem meer in als ik deze span uit de nest haalde */
+span {
+    font-weight: 700;
+    display: block;
+}
+
+.main__heading--p {
+    font-size: var(--font-size);
+    font-weight: 200;
+}
