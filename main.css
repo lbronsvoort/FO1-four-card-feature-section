@@ -69,6 +69,7 @@ span {
 
 .main__grid {
     margin-top: 4em;
+    max-width: 100%;
 }
 
 .main__grid--card {
@@ -106,6 +107,7 @@ span {
 
 .cyan {
     border-top: .3em solid var(--primary-cyan);
+    align-self: center;
 }
 
 .red {
@@ -118,9 +120,33 @@ span {
 
 .blue {
     border-top: .3em solid var(--primary-blue);
+    align-self: center;
 }
 
 /* Media Queries */
+
+
+/* Brengt de cards naast elkaar */
+@media (min-width: 900px) {
+    .main__grid {
+        display: flex;
+    }
+
+    .main__grid--card, .main__grid--card:not(:last-child) {
+        margin: 0;
+     }
+}
+
+/* Vanaf 425 pixels en hoger geldt dit */
+@media (min-width: 425px) {
+    .main {
+        padding: 4em 0;
+    }
+    
+    .main__grid--card {
+        width: 100%;
+    }
+}
 
 @media (max-width: 425px) {
     .main__heading--h1 {
