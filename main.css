@@ -9,6 +9,7 @@
     --neutral-light-gray: hsl(0, 0%, 98%);
 
     --font-size: 15px;
+    --font-size-sm: 13px;
     --font-family: 'Poppins', sans-serif;
 }
 
@@ -25,20 +26,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 /* Tekst */
 
 .main {
     border: 1px solid red;
-    /* Media queries straks voor de padding op mobiel */
+    padding: 4em .8em;
 }
 
 .main__heading {
     text-align: center;
     color: var(--neutral-dark-blue);
-    margin-bottom: 2em;
+    /* margin-bottom: 4em; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Op de een of andere manier werkt dit niet genest. */
@@ -57,4 +61,30 @@ span {
 .main__heading--p {
     font-size: var(--font-size);
     font-weight: 200;
+    width: 80%;
+}
+
+/* Cards */
+
+.main__grid {
+    margin-top: 4em;
+}
+
+.main__grid--card {
+    background-color: white;
+    margin: 1em;
+}
+
+/* Media Queries */
+
+@media (max-width: 425px) {
+    .main__heading--h1 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .main__heading--h1 {
+        font-size: 1.2rem;
+    }
 }
